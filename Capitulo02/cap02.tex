@@ -1,0 +1,92 @@
+%-----------------------------------------------------------------------
+% Capítulo 2
+%-----------------------------------------------------------------------
+\chapter{Título del capítulo}\label{cap:02}
+\pagecolor{white}
+\BgThispage
+\thispagestyle{empty}
+\pagestyle{isfodosuCD}
+\epigraph{Nunca se alcanza la verdad total, ni nunca se está totalmente alejado de ella.}{Aristóteles}
+
+\lettrine[lraise=0, lines=4, loversize=0]{\textcolor{azulF}{A}}{lgunas} disciplinas, como la música y las matemáticas, 
+han recurrido al lenguaje artificial o simbólico para simplificar la expresión de ideas complejas. A diferencia de los 
+lenguajes naturales como el español, el inglés o el ciguayo, que son herramientas generales de comunicación, los 
+lenguajes simbólicos están diseñados con un propósito específico, lo que nos permite expresar pensamientos en términos 
+precisos sin ambigüedad y contenido emocional.
+
+
+
+\textbf{Forma de usar el ambiente del ejemplo con nombre del ejemplo. Recordar que cada ambiente tiene dos copciones, 
+la primero es para el nombre y la segunda para la etiqueta de referencia.}
+\begin{ejem}[\;\;(Negación)][ejem:02:03]
+\centering
+La función seno es periódica.
+
+\smallskip
+
+La función seno \textcolor{Naranja}{\textbf{no}} es periódica.
+\end{ejem}
+
+
+%-----------------------------------------
+\subsection{\textit{Título de la subsección}}
+
+\textbf{Ejemplo de una tabla con encabezado gris}
+
+\begin{table}[H]
+\begin{tabular}{c|c|c}
+\rowcolor{gray!20}$p$ & $q$ & $p\wedge q$\\
+\toprule
+\textcolor{blue}{\textbf{V}} & \textcolor{blue}{\textbf{V}} & \textcolor{blue}{\textbf{V}}\\
+\textcolor{blue}{\textbf{V}} & \textcolor{red}{\textbf{F}} & \textcolor{red}{\textbf{F}}\\
+\textcolor{red}{\textbf{F}} & \textcolor{blue}{\textbf{V}} & \textcolor{red}{\textbf{F}}\\
+\textcolor{red}{\textbf{F}} & \textcolor{red}{\textbf{F}} & \textcolor{red}{\textbf{F}}\\
+\toprule
+\end{tabular}
+\caption{Tabla de verdad para la conjunción}\label{tab:02:03}
+\end{table}
+
+\textbf{Ejemplo de una tabla con encabezado azul claro}
+\begin{table}[H]
+\begin{tabular}{c|c|c|c|c|c}
+\rowcolor{LightBlue2}$p$ & $q$ & $p\wedge q$ & $p\longrightarrow q$ & $\neg(p\longrightarrow q)$ & $(p\wedge 
+q)\vee\neg(p\longrightarrow q)$\\
+\toprule
+\textcolor{red}{\textbf{F}} & \textcolor{red}{\textbf{F}} & \textcolor{red}{\textbf{F}} & \textcolor{blue}{\textbf{V}} & 
+\textcolor{red}{\textbf{F}} & \textcolor{red}{\textbf{F}}\\
+\textcolor{red}{\textbf{F}} & \textcolor{blue}{\textbf{V}} & \textcolor{red}{\textbf{F}} & \textcolor{blue}{\textbf{V}} 
+& \textcolor{red}{\textbf{F}} & \textcolor{red}{\textbf{F}}\\
+\textcolor{blue}{\textbf{V}} & \textcolor{red}{\textbf{F}} & \textcolor{red}{\textbf{F}} & \textcolor{red}{\textbf{F}} & 
+\textcolor{blue}{\textbf{V}} & \textcolor{blue}{\textbf{V}}\\
+\textcolor{blue}{\textbf{V}} & \textcolor{blue}{\textbf{V}} & \textcolor{blue}{\textbf{V}} & 
+\textcolor{blue}{\textbf{V}} & \textcolor{red}{\textbf{F}} & \textcolor{blue}{\textbf{V}}\\ 
+\toprule
+\end{tabular}
+\caption{Tabla del ejemplo \ref{ejem:02:46}}\label{tab:02:07}
+\end{table}
+
+
+%-----------------------------------------
+\cleardoublepage
+\subchapter{Problemas propuestos}
+\setenumerate[1]{label=\bfseries{\alph*)\quad}, labelindent=\parindent}
+\setenumerate[2]{label=\bfseries\arabic*.}
+\setenumerate[3]{label=\bfseries{\roman*})}
+\pagestyle{probprop}
+\pagecolor{paginaprob}
+
+\begin{prob} ¿Cuáles de las siguientes son proposiciones? En caso que sea un proposición, diga si es verdadera o falsa.
+\begin{multicols}{2}
+\begin{enumerate}
+     \item $7-4=3$.
+     \item $5^{4}<3^{2}$.
+     \item En la escuela nos enseñan a caminar.
+     \item Tu voto es tu opinión.
+     \item ¿Te duele?
+     \item !`Cállate la boca!
+     \item Aquel árbol es azul.
+     \item La música es una expresión del arte.
+\end{enumerate}
+\end{multicols}
+\end{prob}
+

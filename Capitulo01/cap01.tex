@@ -1,0 +1,132 @@
+%-----------------------------------------------------------------------
+%	Capítulo 1
+%-----------------------------------------------------------------------
+\chapter{Título del Capítulo}\label{cap:01}
+\BgThispage
+\thispagestyle{empty}
+\pagestyle{isfodosuCD}
+\epigraph{No puedo enseñar nada a nadie. Solo puedo hacerles pensar.}{Sócrates}
+
+\lettrine[lraise=0, lines=4, loversize=0]{\textcolor{azulF}{L}}{a} lógica tradicional como parte de la filosofía es una 
+de las disciplinas científicas más antiguas. Se remonta a los estoicos y al filósofo, polímata y científico 
+\textcolor{azulF}{\textbf{Aristóteles}}, y es la raíz de lo que hoy se llama \textbf{lógica filosófica}. Sin embargo, la 
+lógica matemática es una disciplina relativamente joven, que surgió a partir de los esfuerzos de: 
+\textcolor{azulF}{\textbf{Giuseppe Peano}}, matemático, lógico y filósofo italiano, \textcolor{azulF}{\textbf{Friedrich 
+Ludwig Gottlob Frege}}, matemático, lógico y filósofo alemán y \textcolor{azulF}{\textbf{Bertrand Arthur William 
+Russell}}, filósofo, matemático, lógico y escritor británico, que contribuyeron a reducir las matemáticas por completo a 
+la lógica. A lo largo del siglo $XX$ se ha desarrollado de forma constante hasta convertirse en una amplia disciplina 
+con varias subáreas y numerosas aplicaciones en matemáticas, informática, lingüística y filosofía. 
+
+\medskip
+
+\textbf{Este es un ejemplo de una caja resaltada en color gris}
+\begin{caja}
+\centering
+\textit{el rigor lógico del razonamiento utilizado para justificar los resultados}.
+\end{caja}
+
+%-----------------------------------------
+\section{Título de la sección}
+
+Podemos definir las matemáticas como el estudio del número y del espacio. Aunque se pueden encontrar representaciones en el mundo físico, el objeto de las matemáticas no es físico. En cambio, los objetos matemáticos son abstractos, como las ecuaciones del álgebra o los puntos y las líneas de la geometría. Solo se encuentran como ideas en las mentes. Estas ideas conducen a veces al descubrimiento de otras ideas que no se manifiestan en el mundo físico, como cuando se estudian diversas magnitudes del infinito, mientras que otras conducen a la creación de objetos tangibles, como los puentes o los computadores.
+
+\textbf{Un ejemplo de como colocar item con colores en azul con degradado}
+\begin{itemize}[label=\ptom]
+ \item De las categorías
+ \item Tópicos 
+ \item Refutaciones sofísticas
+ \item Sobre la interpretación
+ \item Primeros analíticos
+ \item Segundos analíticos.
+\end{itemize}
+
+\textbf{Este es un ejemplo de definición:}
+\begin{defi}[][def:01:01]
+Una \textbf{deducción} es un discurso proveniente del latín \textit{logos} del cual, suponiendo ciertas cosas, resulta la necesidad de otra cosa diferente o distinta de las cosas supuestas, solo por haber sido supuestas estas cosas.
+\end{defi}
+
+
+\textbf{Un ejemplo de como usar las cajas de ejemplos:}
+\begin{ejem}[][ejem:01:01] Supongamos nos dicen que un cierto número natural es menor que $35$, y además que el número en cuestión es divisible por $4$ y que al sumarle $3$ obtenemos un número divisible por $5$.
+\end{ejem}
+
+
+\textbf{Este es una ambiente definido en el estilo para las soluciones de los ejemplos.}
+
+\begin{soln} ¿Podemos a partir de esta información inferir cuál o cuáles son los números?
+
+\medskip
+
+Ahora bien, como el número buscado es un número divisible por 4 y menor que 35, entonces el número debe ser alguno de los siguientes:
+\[4,\quad 8,\quad 12, \quad 16, \quad 20, \quad 24, \quad 28, \quad \hbox{ó}\quad 32\]
+adicionalmente, se pide que al número si le sumamos $3$, el número es divisible por $5$, entonces si exploramos tal situación, obtenemos los que podrían ser una posible solución, y son:
+\[7,\quad 11,\quad 15, \quad 19, \quad 23, \quad 27, \quad 31, \quad 35,\]
+luego entre estos números, los números $15$ y  $35$ son los únicos que son divisibles por $5$, por lo tanto, concluimos que los números buscados son $15$ y $35$.
+\end{soln}
+
+\textbf{Este es un ejemplo de items enumerados en color verde claro para los ejemplos:}
+\begin{ejem}[][ejem:01:09] Los siguientes enunciados no son proposiciones:
+\begin{enumerate}[label=\itembolasverdes{\arabic{*}}]
+ \item\label{ejemplo:01:09:01} Espérame!
+ \item\label{ejemplo:01:09:02} ¿Por qué estudias matemáticas?
+ \item\label{ejemplo:01:09:03} $x+y=x$
+ \item\label{ejemplo:01:09:04} ¡A estudiar!
+ \item\label{ejemplo:01:09:05} Él es un estudiante.
+\end{enumerate}
+\end{ejem}
+
+\textbf{Aquí pueden ver un ejemplo de como referenciar los item enumerados del ejemplo anterior:}
+El enunciado \ref{ejemplo:01:09:03} no es una proposición, pues no hemos especificado el significado de los símbolos $x$ e $y$, y por esto no podemos decir si es verdadera o falsa. Sin embargo, si dijéramos lo siguiente
+\[x+y=x\quad\mbox{ para algún }x,y\in\mathbb{Z}\]
+entonces esa afirmación es una proposición verdadera. Pues tenemos, por ejemplo, que cuando $x=1$ y $y=0$ se cumple que $x+y=x$.
+
+
+\textbf{Este es un ejemplo como usar el ambiente tabular para que las tablas queden con líneas más espaciadas:}
+\begin{center}
+\begin{tabular}{c}
+\textcolor{azulF}{\textbf{Todos los $X$ son $Y$}}\\
+\textcolor{azulF}{\textbf{Algunos $Z$ son $X$}}\\
+\midrule
+\textcolor{Naranja}{\textbf{Algunos $Z$ son $Y$}}
+\end{tabular}
+\end{center}
+
+\textbf{Este es un entorno para colocar en una caja blanca con borde negro algunas citas importantes a modo de resumen 
+en el texto, adicionalmente tambien puede ver como hacer enumeración de item en circulos azules para colocar fuera de 
+los ambientes de ejemplos.}
+
+\begin{cajablanca}
+Al completar el argumento debemos propender para que sea el mejor argumento posible. Este requiere lo siguiente:
+\begin{enumerate}[label=\itembolasazules{\arabic*}]
+	\item la identificación de la(s) premisa(s) necesaria(s) para que el argumento sea deductivamente válido o al menos 
+inductivamente fuerte; o
+	\item la identificación de la conclusión que se sigue deductiva o inductivamente de las premisas dadas.
+\end{enumerate}
+\end{cajablanca}
+
+
+%-----------------------------------------
+\cleardoublepage
+\subchapter{Problemas propuestos}
+% \thepagestyle{empty}
+\setenumerate[1]{label=\bfseries{\alph*)\quad}, labelindent=\parindent}
+\setenumerate[2]{label=\bfseries\arabic*.}
+\setenumerate[3]{label=\bfseries{\roman*})}
+\pagestyle{probprop}
+\pagecolor{paginaprob}
+% \captionsetup[figure]{textformat=simple}
+
+\begin{prob} Indique cuáles de las siguientes oraciones son enunciados.
+\begin{enumerate}
+ \item ?`Dónde queda Samarcanda?
+ \item !`No me vuelvas a llamar!
+ \item Beijing es una ciudad enorme.
+ \item Por favor, cierra la puerta cuando salgas.
+ \item La autosuficiencia petrolera del país solo durará cinco años más.
+ \item ?`Quién va primero?
+ \item $4+6=10$
+ \item Este ejercicio es corto.
+\end{enumerate}
+\end{prob}
+
+\textbf{Bajo el ambiente prob se pueden generar los ejercicios de cada capítulo del libro.}

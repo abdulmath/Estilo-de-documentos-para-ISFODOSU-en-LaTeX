@@ -1,0 +1,68 @@
+%-----------------------------------------------------------------------
+% Capítulo 4
+%-----------------------------------------------------------------------
+\chapter{Título del capítulo}\label{cap:04}
+\pagecolor{white}
+\BgThispage
+\thispagestyle{empty}
+\pagestyle{isfodosuCD}
+\epigraph{Si no esperas lo inesperado no lo reconocerás cuando llegue.}{Heráclito}
+
+\lettrine[lraise=0, lines=4, loversize=0]{\textcolor{azulF}{A}}{unque} la \textbf{teoría de conjuntos} se reconoce como 
+la piedra angular de las \textit{nuevas matemáticas}, el pensamiento intuitivo de los conjuntos no es esencialmente 
+nada nuevo. Los matemáticos han considerado colecciones de un tipo u otro desde los tiempos más remotos, y los 
+conceptos básicos de la teoría de conjuntos moderna están implícitos en un gran número de argumentos clásicos. Sin 
+embargo, no fue hasta finales del siglo $XIX$, con la obra de \textcolor{azulF}{\textbf{George Cantor ($1845-1918$)}}, 
+que los conjuntos se convirtieron en el principal objeto de la teoría matemática.
+
+\textbf{ejemplo del ambiente colorario}
+
+\begin{cor}[][coro:04:01] Si $A$ y $B$ son conjuntos, las siguientes afirmaciones son equivalentes entre sí, es decir, 
+siempre que alguna de ellas sea verdadera, entonces las demás lo serán:
+\begin{enumerate}[label=\itembolasgrises{\arabic{*}}]
+ \item\label{corolario:04:01:01} $A=B$;
+ \item\label{corolario:04:01:02} $A$ y $B$ tienen los mismos elementos;
+ \item\label{corolario:04:01:03} $A\subseteq B$ y $B\subseteq A$;
+ \item\label{corolario:04:01:04} $(\forall\,\,x:\,\,x\in A\longrightarrow x\in B)$ y $(\forall\,\,x:\,\,x\in B\longrightarrow x\in A)$;
+ \item\label{corolario:04:01:05} $\forall\,\,x:\,\,x\in A\longleftrightarrow x\in B$;
+ \item\label{corolario:04:01:06} para todo elemento $x$, o bien $x\in A$ y $x\in B$, o bien $x\notin A$ y $x\notin B$.
+\end{enumerate}
+\end{cor}
+
+\newpage
+
+\textbf{Ejemplo del ambiente teorema}
+
+\begin{teo}[][teo:04:01] Sea $\mathcal{U}$ el conjunto universal y $A$, $B$, y $C$ tres conjuntos. Entonces se satisface las siguientes afirmaciones:
+\begin{enumerate}[label=\itembolasgrises{\arabic{*}}]
+ \item\label{teorema:04:01:01} $\emptyset\subseteq A$.
+ \item\label{teorema:04:01:02} $A\subseteq A$.
+ \item\label{teorema:04:01:03} Si $A\subseteq B$ y $B\subseteq C$, entonces $A\subseteq C$.
+ \item\label{teorema:04:01:04} Si $A\subseteq B$ y $B\subseteq A$, entonces $A=B$.
+\end{enumerate}
+\end{teo}
+
+\textbf{ejemplo del ambiente para demostraciones}
+\begin{proof} Para demostrar el apartado \ref{teorema:04:01:01}, hagamos una demostración por reducción al absurdo, o 
+también conocida como el método indirecto. Supongamos que $\emptyset\nsubseteq A$, es decir, existe $x\in\emptyset$ y 
+$x\notin A$. Ahora, como $\emptyset$ no tiene elementos, entonces $x$ no puede estar en el conjunto $\emptyset$, por lo 
+tanto lo supuesto es falso, y entonces se tiene que $\emptyset\subseteq A$.
+\end{proof}
+
+
+\begin{propo}[][pro:04:01] Sean $A$, $B$ y $C$ tres conjuntos sobre un conjunto unversal $\mathcal{U}$, entonces se tiene:
+\begin{enumerate}[label=\itembolasgrises{\arabic{*}}]
+ \item\label{proposicion:04:01:01} $A\cup A=A$ y $A\cap A=A$ (idempotencia).
+ \item\label{proposicion:04:01:02} $A\cup B=B\cup A$ y $A\cap B=B\cap A$ (conmutativa).
+ \item\label{proposicion:04:01:03} $A\subseteq A\cup B$, $B\subseteq A\cup B$, $A\cap B\subseteq A$, y $A\cap B\subseteq B$ (absorción).
+ \item\label{proposicion:04:01:04} $(A\cup B)\cup C=A\cup(B\cup C)$ y $(A\cap B)\cap C=A\cap(B\cap C)$ (asociativa).
+\end{enumerate}
+\end{propo}
+
+
+%-----------------------------------------
+% \cleardoublepage
+\subchapter{Problemas propuestos}
+\pagestyle{probprop}
+\pagecolor{paginaprob}
+

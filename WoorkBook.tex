@@ -1,0 +1,271 @@
+%:Clase del documento
+\documentclass[fontsize=10pt, Myfinal=false, twoside, numbers=noenddot, x11names]{scrbook}
+%, Myfinal=true, Minion=true, English=true
+
+% Pie de pagina configuracion
+% \usepackage{fancyhdr}
+% \pagestyle{fancy}
+% \rfoot[]{\includegraphics{figuras/LetrasISFODOSU.png}}
+
+%:Paquete de estilos propuesto
+\usepackage{libroISFODOSU}
+
+%:Paquete específico para cargar tikz (y sus librerías) y pgfplots
+\usepackage{dtsc-creafig}
+
+%:Paquete para notaciones específicas
+\usepackage{notacion}
+
+%:Paquete para incorporar aspectos concretos de la edición
+\usepackage{edicionLibro}
+
+%:Estas líneas de código son INNECESARIAS excepto para mostrar determinadas características en este manual. Pueden eliminarse o comentarse sin ningún problema.
+%Se usan para compilar el capítulo estilolibroetsi.tex
+\usepackage[final]{showexpl}
+\lstset{explpreset={frame=none,rframe={}, numbers=none,numbersep=3pt, columns=flexible,language={[LaTeX]TeX},basicstyle=\ttfamily,keywordstyle=\color{blue}}}%numberstyle=\tiny,
+
+\makeatletter
+\patchcmd{\SX@codeInput}{xleftmargin=0pt,xrightmargin=0pt}{}
+  {\typeout{***Successfully patched \protect\SX@codeInput***}}
+  {\typeout{***ERROR! Failed to patch \protect\SX@codeInput***}}
+\makeatother
+%:Hasta AQUI
+
+%:Para modificar fácilmente la fuente del texto. 
+\makeatletter
+\ifdtsc@Minion % Queremos utilizar la fuente Minion y lo hemos declarado al principio
+	\ifluatex
+		\setmainfont[Renderer=Basic, Ligatures=TeX,	% Fuente del texto 
+		Scale=1.01,
+		]{Minion Pro}
+   		% En este caso conviene modificar ligeramente el tamaño de las fuentes matemáticas
+		\DeclareMathSizes{10}{10.5}{7.35}{5.25}
+		\DeclareMathSizes{10.95}{11.55}{8.08}{5.77}
+		\DeclareMathSizes{12}{12.6}{8.82}{6.3}
+%		\setmainfont[Renderer=Basic, Ligatures=TeX,	% Fuente del texto 
+%		]{Adobe Garamond Pro}
+%		\setmainfont[Renderer=Basic, Ligatures=TeX,	% Fuente del texto 
+%		]{Palatino LT Std}
+	\fi
+\else
+	\ifluatex
+		% Para utilizar la fuente Times New Roman, o alguna otra que se tenga instalada
+		\setmainfont[Renderer=Basic, Ligatures=TeX,	% Fuente del texto 
+		Scale=1.0,
+		]{Times New Roman}
+	\else
+		\usepackage{tgtermes} 	%clone of Times
+		%\usepackage[default]{droidserif}
+		%\usepackage{anttor} 	
+	\fi
+\fi
+\makeatother
+
+%Por si quieren usar bibliografía con BIBER
+%BIBER%%:Para la bibliografía en BIBER, descomentar las líneas siguientes
+%\defbibheading{etsi}[]{%
+%	\chapter*{Bibliografía}%
+%	\chaptermark{Bibliografía} 
+%	\markboth{#1}{#1}}
+%\addbibresource{bibliografiaLibroETSI.bib}
+
+% Ejemplo de Glosario
+\newacronym[type=main]{ISFODOSU}{ISFODOSU}{Instituto Superior de Formación Docente Salomé Ureña}
+\newacronym[type=main]{EPH}{EPH}{Recinto ``XXXXX CCCCCCC VVVVVV''}
+
+\makeindex
+% \makeglossaries %Si no se quiere el glosario, comentar esta línea.
+
+%TAMAÑO LIBRO O A4
+%Para definir el tamaño del documento, hay que elegir uno de los siguientes y comentar el otro
+%Formato Libro
+\geometry
+{paperheight=254mm,%
+paperwidth=177.8mm,%
+top=25mm,%
+headsep=7.5mm,%
+footskip=10mm,%
+textheight=210mm,%
+textwidth=132mm,%
+bindingoffset=15mm,%
+twoside}
+
+% \usepackage[a4,cross,center]{crop}% para poner las cruces de esquina de página, poner la opción cross. Comentar para 
+%que el fichero pdf se genere con el tamaño deseado
+
+%:Esquema de numeración por defecto
+\setenumerate[1]{label=\normalfont\bfseries{\arabic*.}, leftmargin=*, labelindent=\parindent}
+\setenumerate[2]{label=\normalfont\bfseries{\alph*}), leftmargin=*}
+\setenumerate[3]{label=\normalfont\bfseries{\roman*.}, leftmargin=*}
+\setlist{itemsep=.1em}
+\setlength{\parindent}{1.0 em}
+
+\setcounter{tocdepth}{5}						% El nivel hasta el que se muestra el índice 
+
+%PARA ENVIAR MANUSCRITO
+%Para manuscrito a revisar, descomentar siguiente línea y así se pondrá el interlineado a 1.5 líneas
+%\onehalfspacing  %necesario setspace package
+%
+%
+%Para otros espaciados:
+%  Type \singlespacing, \onehalfspacing, or \doublespacing, depending on the spacing you want.
+%  Type \setstretch{x} where x is a number indicating the spacing you want.
+%
+ %  For example, the command \setstretch{3} produces triple spacing.
+%
+% \let\cleardoublepage\clearpage
+\setlength{\marginparwidth}{90pt}
+% \setlength{columnsep}{3cm}
+
+%:Empieza el documento
+\hypersetup{pageanchor=false}
+\begin{document}
+
+%PORTADA
+%ver edicionLibro.sty para modificaciones
+
+%:Para crear la portada y la portada interior (pagina titular)
+\titulo{Título del Libro}
+\subtitulo{Serie Matemáticas} %Se puede usar en libro
+\edicion{Primera edición} %Se puede usar en libro
+
+\autor{Autor o autores del libro}
+
+\universidad{Instituto Superior de Formación Docente Salomé Ureña}
+% \centro{Recinto Félix Evaristo Mejía}
+\centro{Aquí el recinto al cual pertenece el autor}
+\departamento{Vicerrectoría Académica}
+
+\fecha{Año de publicación}
+
+% Para establecer palabras claves en el fichero pdf
+\hypersetup
+	{
+ 	linkcolor=black, %Tocar para poner color en enlaces
+	pdfauthor={\elautor},
+	pdftitle={\eltitulo}, 
+	citecolor=black, %Tocar para poner color en enlaces, eg refcolor o blue
+	pdfkeywords={Serie Matemática, Instituto Superior de Formación Docente Salomé Ureña}	
+	 }
+
+%:Construcción de la cubierta, páginas de título y copyright
+%\cubiertalibro{figuras/imagenlibro.png} 
+
+\paginatitulo
+
+\paginatituloautor{figuras/isfodosu.pdf} %Logo del Dep
+
+% \copyright
+
+%:Todo lo que constituye la primera parte del libro que no es el cuerpo del libro en realidad
+\frontmatter
+\pagenumbering{Roman} %Pone la numeración en mayúscula (En español parece que es obligatorio)
+
+%:La dedicatoria, si queremos ponerla
+\dedicatoria{Aquí va la dedicatoria} 
+
+\include{agradecimientos/agradecimientos}
+
+%PFC/PFM/TESIS
+% \include{resumen/resumen} %Descomentar para proyectos/tesis
+\include{prefacio/prefacio} %Comentar para proyectos/tesis
+
+
+%Índice normal, el completo
+\cleardoublepage
+\phantomsection
+% \addcontentsline{toc}{listasf}{Índice}
+\pagestyle{especial}
+\tableofcontents
+% \thispagestyle{empty}
+
+%:Indice de figuras, coméntese las siguientes líneas si no se desea
+\cleardoublepage
+\phantomsection
+
+%:Para añadir una línea en blanco en el TOC y separar esta lista
+\addtocontents{toc}{\protect\mbox{}\protect\hspace*{0pt}\par}
+\addcontentsline{toc}{listasb}{\listfigurename}
+\pagestyle{especial}
+\listoffigures
+\thispagestyle{empty}
+
+%:Indice de tablas, coméntese las siguientes líneas si no se desea
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{listasb}{\listtablename}
+\pagestyle{especial}
+\listoftables
+\thispagestyle{empty}
+
+% %:Indice de Programas
+% \cleardoublepage
+% \phantomsection
+% \addcontentsline{toc}{listasb}{\lstlistlistingname}
+% \pagestyle{especial}
+% \lstlistoflistings
+
+\include{notacion/notacion} %No incluir si no se quiere, comentándolo
+
+%:Empieza el contenido del libro
+\mainmatter
+
+%:Página por defecto
+\pagestyle{isfodosuCD}
+\hypersetup{pageanchor=true}
+
+%:Para incluir toda la referencia bibliográfica aunque no se cite, descomente la siguiente línea
+%\nocite{*}
+\nocite{UZ2011,UZC2011}
+
+%:Los diferentes capítulos, en carpetas separadas
+% \include{introduccion/introduccion}
+\include{Capitulo01/cap01}
+\include{Capitulo02/cap02}
+\include{Capitulo03/cap03}
+\include{Capitulo04/cap04}
+\include{Capitulo05/cap05}
+\include{Capitulo06/cap06}
+\include{Capitulo07/cap07}
+
+%:Empezamos con los apéndices, que irían en uno o más ficheros. Es necesario incluir estos ficheros entre el entorno \begin{appendices}....\end{appendices} debido a que se ha deseado utilizar un formato diferente para el título de los apéndices, incluyendo la palabra apéndice, para la numeración de los apéndices, alfabético, y para las cabeceras de las páginas.
+
+% \begin{appendices}
+% % Fichero en el que se incluyen los apéndices
+% \include{apendices/apendices} %Ver este fichero para incluir ahí los apéndices.
+% \end{appendices}
+%:Fin de la inclusión de apéndices
+
+%:Empieza todo lo que no constituye el cuerpo en si del libro. Todo lo que va detrás
+
+\backmatter
+
+%:Bibliografía con biblatex y biber
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{listasb}{\bibname}
+\pagestyle{especial}
+\pagecolor{white}
+%BIBER
+%\printbibliography[heading=etsi]
+%BIBTEX
+% \bibliographystyle{IEEEtran}
+\bibliographystyle{amsplain} %flexbib amsplain alpha
+%:Fichero con la bibliografía, BIBTEX
+\bibliography{bibliografiaLibroISFODOSU}
+
+%:Índice alfabético
+% \cleardoublepage
+% \phantomsection
+% \addcontentsline{toc}{listasb}{\indexname}
+% \chaptermark{\indexname}
+% \printindex
+
+%:Acrónimos
+% \cleardoublepage
+% \phantomsection
+% \addcontentsline{toc}{listasb}{\glossaryname}
+% \chaptermark{\glossaryname}
+% \printglossaries
+
+\end{document}
